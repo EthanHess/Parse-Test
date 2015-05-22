@@ -35,7 +35,7 @@
     entry.name = self.textField.text;
     
     NSError *error = nil;
-    [entry pin];
+    [entry pinInBackground];
     [entry saveInBackground];
     
     
@@ -53,7 +53,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (error) {
-            // The find succeeded.
+            
             NSLog(@"%@", error.localizedDescription);
 
     }
